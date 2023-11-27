@@ -26,7 +26,7 @@ const Carouselle = (props) => {
           </div>
           <div className="add-count-to-basket">
             <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
+            <span>{isOrdered ? orderCount : 0}</span>
             <button type="button">+</button>
           </div>
         </div>
@@ -39,7 +39,7 @@ const Carouselle = (props) => {
           </div>
           <div className="add-count-to-basket">
             <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
+            <span>{isOrdered ? orderCount : 0}</span>
             <button type="button">+</button>
           </div>
         </div>
@@ -52,7 +52,7 @@ const Carouselle = (props) => {
           </div>
           <div className="add-count-to-basket">
             <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
+            <span>{isOrdered ? orderCount : 0}</span>
             <button type="button">+</button>
           </div>
         </div>
@@ -65,7 +65,7 @@ const Carouselle = (props) => {
           </div>
           <div className="add-count-to-basket">
             <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
+            <span>{isOrdered ? orderCount : 0}</span>
             <button type="button">+</button>
           </div>
         </div>
@@ -78,7 +78,7 @@ const Carouselle = (props) => {
           </div>
           <div className="add-count-to-basket">
             <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
+            <span>{isOrdered ? orderCount : 0}</span>
             <button type="button">+</button>
           </div>
         </div>
@@ -91,7 +91,7 @@ const Carouselle = (props) => {
           </div>
           <div className="add-count-to-basket">
             <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
+            <span>{isOrdered ? orderCount : 0}</span>
             <button type="button">+</button>
           </div>
         </div>
@@ -104,7 +104,7 @@ const Carouselle = (props) => {
           </div>
           <div className="add-count-to-basket">
             <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
+            <span>{isOrdered ? orderCount : 0}</span>
             <button type="button">+</button>
           </div>
         </div>
@@ -117,7 +117,7 @@ const Carouselle = (props) => {
           </div>
           <div className="add-count-to-basket">
             <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
+            <span>{isOrdered ? orderCount : 0}</span>
             <button type="button">+</button>
           </div>
         </div>
@@ -130,7 +130,7 @@ const Carouselle = (props) => {
           </div>
           <div className="add-count-to-basket">
             <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
+            <span>{isOrdered ? orderCount : 0}</span>
             <button type="button">+</button>
           </div>
         </div>
@@ -143,7 +143,7 @@ const Carouselle = (props) => {
           </div>
           <div className="add-count-to-basket">
             <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
+            <span>{isOrdered ? orderCount : 0}</span>
             <button type="button">+</button>
           </div>
         </div>
