@@ -26,6 +26,11 @@ const Product = (props) => {
     setIsModalOpen(false);
   };
 
+  const handleAddToBasket = (product, quantity) => {
+    const orderedProduct = { ...product, quantity };
+    onProductSelect(orderedProduct);
+  };
+
   return (
     <article className="product" data-ordered={isOrdered}>
       <div>
@@ -48,6 +53,7 @@ const Product = (props) => {
           product={product}
           onClose={handleClose}
           onLike={onProductLike}
+          onAddToBasket={handleAddToBasket}
         ></ProductModal>
       )}
     </article>

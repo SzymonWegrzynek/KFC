@@ -2,6 +2,7 @@ import "./ProductModal.scss";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 import Carouselle from "../Carouselle/Carouselle";
+import { useState } from "react";
 
 const ProductModal = (props) => {
   const {
@@ -12,8 +13,20 @@ const ProductModal = (props) => {
     orderCount,
     handleButtonClick,
     orderedProducts,
+    onAddToBasket,
   } = props;
   const { imageUrl, description, name, price } = product;
+
+  const [quantity, setQuantity] = useState(1);
+
+  const handleQuantityChange = (newQuantity) => {
+    setQuantity(newQuantity);
+  };
+
+  const handleAddToBasket = () => {
+    onAddToBasket(product, quantity);
+    onClose();
+  };
 
   const handleCloseButtonClick = () => {
     onClose();
@@ -47,13 +60,25 @@ const ProductModal = (props) => {
               imageUrl={imageUrl}
               name={name}
               price={price}
+              onAddToBasket={handleAddToBasket}
             ></Carouselle>
           </div>
           <div className="add-to-basket-part">
             <div className="add-count-to-basket">
-              <button type="button">-</button>
-              <span>{isOrdered ? orderCount : 1}</span>
-              <button type="button">+</button>
+              <button
+                type="button"
+                onClick={() => handleQuantityChange(quantity - 1)}
+                disabled={quantity <= 1}
+              >
+                -
+              </button>
+              <span>{quantity}</span>
+              <button
+                type="button"
+                onClick={() => handleQuantityChange(quantity + 1)}
+              >
+                +
+              </button>
             </div>
             <div className="add-to-basket-button">
               <button
@@ -61,8 +86,9 @@ const ProductModal = (props) => {
                 onClick={handleButtonClick}
                 isOrdered={isOrdered}
                 orderCount={orderCount}
+                onClick={handleAddToBasket}
               >
-                DODAJ DO KOSZYKA {price}
+                DODAJ DO KOSZYKA {price * quantity}
               </button>
             </div>
           </div>
