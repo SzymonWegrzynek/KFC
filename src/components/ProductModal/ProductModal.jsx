@@ -48,7 +48,7 @@ const ProductModal = (props) => {
           <div className="add-to-basket-part">
             <div className="add-count-to-basket">
               <button type="button">-</button>
-              <span>{}</span>
+              <span>{isOrdered ? orderCount : 1}</span>
               <button type="button">+</button>
             </div>
             <div className="add-to-basket-button">
@@ -58,8 +58,9 @@ const ProductModal = (props) => {
                 isOrdered={isOrdered}
                 orderCount={orderCount}
               >
-                {" "}
-                {isOrdered ? orderCount : "+"}
+                DODAJ DO KOSZYKA {price}
+                {/* {" "}
+                {isOrdered ? orderCount : "+"} */}
               </button>
             </div>
           </div>
@@ -67,5 +68,6 @@ const ProductModal = (props) => {
       </div>
     </div>
   );
-};-
+};
+
 export default ProductModal;

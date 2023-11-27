@@ -104,20 +104,26 @@
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
-        padding: 32px;
+        padding: 18px 24px;
+        position: sticky;
+        bottom: 0;
 
         & > .add-to-basket-button {
-          background-color: #28a745;
-          border-radius: 5px;
-          padding: 5px 10px;
-          margin: 5px 5px;
-          font-size: 20px;
-          cursor: pointer;
-          color: #fff;
-
-          &:hover {
-            background-color: #57b73d;
+          & > button {
+            background-color: #28a745;
+            border-radius: 15px;
+            padding: 5px 10px;
+            margin: 5px 5px;
+            width: 27vw;
+            height: 6vh;
+            cursor: pointer;
             color: #fff;
+            font-weight: bold;
+
+            &:hover {
+              background-color: #57b73d;
+              color: #fff;
+            }
           }
         }
 
@@ -125,14 +131,20 @@
           background-color: #fff;
           border-radius: 10px;
 
+          & > span {
+            margin: 0 10px;
+          }
+
           & > button {
             background-color: #28a745;
-            border-radius: 5px;
+            border-radius: 10px;
             padding: 5px 10px;
             margin: 5px 5px;
-            font-size: 20px;
+            width: 45px;
+            height: 6vh;
             cursor: pointer;
             color: #fff;
+            font-weight: bold;
 
             &:hover {
               background-color: #57b73d;
