@@ -2,7 +2,7 @@ import Carousel from "react-elastic-carousel";
 import "./Carouselle.scss";
 
 const Carouselle = (props) => {
-  const { imageUrl, name } = props;
+  const { imageUrl, name, price } = props;
 
   const handleCarouselClick = (e) => {
     e.stopPropagation();
@@ -11,7 +11,7 @@ const Carouselle = (props) => {
   return (
     <div className="carousel-container" onClick={handleCarouselClick}>
       <Carousel
-        autoPlaySpeed={4000}
+        autoPlaySpeed={7000}
         enableAutoPlay={true}
         showArrows={false}
         focusOnSelect={true}

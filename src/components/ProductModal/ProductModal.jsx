@@ -43,7 +43,7 @@ const ProductModal = (props) => {
           </div>
           <div className="carouselle-part">
             <p>DODAJ TO CO LUBISZ</p>
-            <Carouselle></Carouselle>
+            <Carouselle imageUrl={imageUrl} name={name}></Carouselle>
           </div>
           <div className="add-to-basket-part">
             <div className="add-count-to-basket">
@@ -59,8 +59,6 @@ const ProductModal = (props) => {
                 orderCount={orderCount}
               >
                 DODAJ DO KOSZYKA {price}
-                {/* {" "}
-                {isOrdered ? orderCount : "+"} */}
               </button>
             </div>
           </div>
