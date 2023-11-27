@@ -2,7 +2,7 @@ import Carousel from "react-elastic-carousel";
 import "./Carouselle.scss";
 
 const Carouselle = (props) => {
-  const { imageUrl, name, price } = props;
+  const { imageUrl, name, price, isOrdered, orderCount } = props;
 
   const handleCarouselClick = (e) => {
     e.stopPropagation();
@@ -19,47 +19,133 @@ const Carouselle = (props) => {
       >
         <div className="carousel-item">
           <img src={imageUrl} alt={name} />
-          <p>{name}</p>
+          <div className="div-with-p-and-strong">
+            {" "}
+            <p>{name}</p>
+            <strong className="price">{price}</strong>
+          </div>
+          <div className="add-count-to-basket">
+            <button type="button">-</button>
+            <span>{isOrdered ? orderCount : 1}</span>
+            <button type="button">+</button>
+          </div>
         </div>
         <div className="carousel-item">
           <img src={imageUrl} alt={name} />
-          <p>{name}</p>
+          <div className="div-with-p-and-strong">
+            {" "}
+            <p>{name}</p>
+            <strong className="price">{price}</strong>
+          </div>
+          <div className="add-count-to-basket">
+            <button type="button">-</button>
+            <span>{isOrdered ? orderCount : 1}</span>
+            <button type="button">+</button>
+          </div>
         </div>
         <div className="carousel-item">
           <img src={imageUrl} alt={name} />
-          <p>{name}</p>
+          <div className="div-with-p-and-strong">
+            {" "}
+            <p>{name}</p>
+            <strong className="price">{price}</strong>
+          </div>
+          <div className="add-count-to-basket">
+            <button type="button">-</button>
+            <span>{isOrdered ? orderCount : 1}</span>
+            <button type="button">+</button>
+          </div>
         </div>
         <div className="carousel-item">
           <img src={imageUrl} alt={name} />
-          <p>{name}</p>
+          <div className="div-with-p-and-strong">
+            {" "}
+            <p>{name}</p>
+            <strong className="price">{price}</strong>
+          </div>
+          <div className="add-count-to-basket">
+            <button type="button">-</button>
+            <span>{isOrdered ? orderCount : 1}</span>
+            <button type="button">+</button>
+          </div>
         </div>
         <div className="carousel-item">
           <img src={imageUrl} alt={name} />
-          <p>{name}</p>
+          <div className="div-with-p-and-strong">
+            {" "}
+            <p>{name}</p>
+            <strong className="price">{price}</strong>
+          </div>
+          <div className="add-count-to-basket">
+            <button type="button">-</button>
+            <span>{isOrdered ? orderCount : 1}</span>
+            <button type="button">+</button>
+          </div>
         </div>
         <div className="carousel-item">
           <img src={imageUrl} alt={name} />
-          <p>{name}</p>
+          <div className="div-with-p-and-strong">
+            {" "}
+            <p>{name}</p>
+            <strong className="price">{price}</strong>
+          </div>
+          <div className="add-count-to-basket">
+            <button type="button">-</button>
+            <span>{isOrdered ? orderCount : 1}</span>
+            <button type="button">+</button>
+          </div>
         </div>
         <div className="carousel-item">
           <img src={imageUrl} alt={name} />
-          <p>{name}</p>
+          <div className="div-with-p-and-strong">
+            {" "}
+            <p>{name}</p>
+            <strong className="price">{price}</strong>
+          </div>
+          <div className="add-count-to-basket">
+            <button type="button">-</button>
+            <span>{isOrdered ? orderCount : 1}</span>
+            <button type="button">+</button>
+          </div>
         </div>
         <div className="carousel-item">
           <img src={imageUrl} alt={name} />
-          <p>{name}</p>
+          <div className="div-with-p-and-strong">
+            {" "}
+            <p>{name}</p>
+            <strong className="price">{price}</strong>
+          </div>
+          <div className="add-count-to-basket">
+            <button type="button">-</button>
+            <span>{isOrdered ? orderCount : 1}</span>
+            <button type="button">+</button>
+          </div>
         </div>
         <div className="carousel-item">
           <img src={imageUrl} alt={name} />
-          <p>{name}</p>
+          <div className="div-with-p-and-strong">
+            {" "}
+            <p>{name}</p>
+            <strong className="price">{price}</strong>
+          </div>
+          <div className="add-count-to-basket">
+            <button type="button">-</button>
+            <span>{isOrdered ? orderCount : 1}</span>
+            <button type="button">+</button>
+          </div>
         </div>
         <div className="carousel-item">
           <img src={imageUrl} alt={name} />
-          <p>{name}</p>
-        </div>
-        <div className="carousel-item">
-          <img src={imageUrl} alt={name} />
-          <p>{name}</p>
+          <div className="div-with-p-and-strong">
+            {" "}
+            <p>{name}</p>
+            <strong className="price">{price}</strong>
+          </div>
+          <div className="add-count-to-basket">
+            <button type="button">-</button>
+            <span>{isOrdered ? orderCount : 1}</span>
+            <button type="button">+</button>
+          </div>
         </div>
       </Carousel>
     </div>
