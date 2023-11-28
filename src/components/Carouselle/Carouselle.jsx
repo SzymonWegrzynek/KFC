@@ -1,8 +1,19 @@
 import Carousel from "react-elastic-carousel";
 import "./Carouselle.scss";
+import ItemCarousel from "../ItemCarousel/ItemCarousel";
+import React, { useState, useEffect } from "react";
+import productsData from "/src/mocks/products.json";
 
 const Carouselle = (props) => {
   const { imageUrl, name, price, isOrdered, orderCount } = props;
+
+  const [randomProducts, setRandomProducts] = useState([]);
+
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * (productsData.length - 3));
+    const selectedProducts = productsData.slice(randomIndex, randomIndex + 5);
+    setRandomProducts(selectedProducts);
+  }, []);
 
   const handleCarouselClick = (e) => {
     e.stopPropagation();
@@ -17,136 +28,11 @@ const Carouselle = (props) => {
         focusOnSelect={true}
         pagination={true}
       >
-        <div className="carousel-item">
-          <img src={imageUrl} alt={name} />
-          <div className="div-with-p-and-strong">
-            {" "}
-            <p>{name}</p>
-            <strong className="price">{price}</strong>
+        {randomProducts.map((product) => (
+          <div key={product.id} className="carousel-item">
+            <ItemCarousel {...product} />
           </div>
-          <div className="add-count-to-basket">
-            <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
-            <button type="button">+</button>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={imageUrl} alt={name} />
-          <div className="div-with-p-and-strong">
-            {" "}
-            <p>{name}</p>
-            <strong className="price">{price}</strong>
-          </div>
-          <div className="add-count-to-basket">
-            <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
-            <button type="button">+</button>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={imageUrl} alt={name} />
-          <div className="div-with-p-and-strong">
-            {" "}
-            <p>{name}</p>
-            <strong className="price">{price}</strong>
-          </div>
-          <div className="add-count-to-basket">
-            <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
-            <button type="button">+</button>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={imageUrl} alt={name} />
-          <div className="div-with-p-and-strong">
-            {" "}
-            <p>{name}</p>
-            <strong className="price">{price}</strong>
-          </div>
-          <div className="add-count-to-basket">
-            <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
-            <button type="button">+</button>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={imageUrl} alt={name} />
-          <div className="div-with-p-and-strong">
-            {" "}
-            <p>{name}</p>
-            <strong className="price">{price}</strong>
-          </div>
-          <div className="add-count-to-basket">
-            <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
-            <button type="button">+</button>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={imageUrl} alt={name} />
-          <div className="div-with-p-and-strong">
-            {" "}
-            <p>{name}</p>
-            <strong className="price">{price}</strong>
-          </div>
-          <div className="add-count-to-basket">
-            <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
-            <button type="button">+</button>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={imageUrl} alt={name} />
-          <div className="div-with-p-and-strong">
-            {" "}
-            <p>{name}</p>
-            <strong className="price">{price}</strong>
-          </div>
-          <div className="add-count-to-basket">
-            <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
-            <button type="button">+</button>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={imageUrl} alt={name} />
-          <div className="div-with-p-and-strong">
-            {" "}
-            <p>{name}</p>
-            <strong className="price">{price}</strong>
-          </div>
-          <div className="add-count-to-basket">
-            <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
-            <button type="button">+</button>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={imageUrl} alt={name} />
-          <div className="div-with-p-and-strong">
-            {" "}
-            <p>{name}</p>
-            <strong className="price">{price}</strong>
-          </div>
-          <div className="add-count-to-basket">
-            <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
-            <button type="button">+</button>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={imageUrl} alt={name} />
-          <div className="div-with-p-and-strong">
-            {" "}
-            <p>{name}</p>
-            <strong className="price">{price}</strong>
-          </div>
-          <div className="add-count-to-basket">
-            <button type="button">-</button>
-            <span>{isOrdered ? orderCount : 1}</span>
-            <button type="button">+</button>
-          </div>
-        </div>
+        ))}
       </Carousel>
     </div>
   );
