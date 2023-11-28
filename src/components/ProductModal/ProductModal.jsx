@@ -1,6 +1,5 @@
 import "./ProductModal.scss";
-import { FaArrowLeftLong } from "react-icons/fa6";
-import { FaRegHeart } from "react-icons/fa";
+import { FaArrowLeftLong, FaRegHeart, FaHeart } from "react-icons/fa6";
 import Carouselle from "../Carouselle/Carouselle";
 import { useState } from "react";
 
@@ -18,6 +17,12 @@ const ProductModal = (props) => {
   const { imageUrl, description, name, price } = product;
 
   const [quantity, setQuantity] = useState(1);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const handleLikeClick = () => {
+    setIsLiked(!isLiked);
+    onLike(product);
+  };
 
   const handleQuantityChange = (newQuantity) => {
     setQuantity(newQuantity);
@@ -35,8 +40,8 @@ const ProductModal = (props) => {
   return (
     <div className="product-modal">
       <div className="product-modal-inner">
-        <button className="add-to-fav">
-          <FaRegHeart />
+        <button className="add-to-fav" onClick={handleLikeClick}>
+          {isLiked ? <FaHeart /> : <FaRegHeart />}
         </button>
         <button className="close-btn" onClick={handleCloseButtonClick}>
           <FaArrowLeftLong />

@@ -1,7 +1,7 @@
 import "./ItemCarousel.scss";
 
 const ItemCarousel = (props) => {
-  const { imageUrl, name, price, isOrdered, orderCount } = props;
+  const { name, price, imageUrl, isOrdered, orderCount } = props;
 
   return (
     <div className="carousel-item">
